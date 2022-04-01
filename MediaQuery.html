@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    
+    <style>
+
+        
+h1{
+    display: none;
+}
+        @media only screen and (max-width: 500px) {
+            body {
+                
+                background-color: red;
+            }
+        }
+
+        @media only screen and (max-width: 600px) and (min-width: 501px) {
+            body {
+                
+                background-color: rgb(36, 247, 53);
+            }
+        }
+        @media only screen and (min-width: 700px) {
+            body {
+
+                background-color: rgb(36, 50, 247);
+                animation: harry 5s ease-in-out infinite ;
+            }
+            h1{
+                display: block;
+                font-size: 40px;
+                border: 1px solid wheat;
+                padding: 20px;
+                text-align: center;
+            }
+
+        }
+        @keyframes harry {
+           0% , 100%{
+               background-color: red;
+           }
+           40%{
+               background-color: rgb(71, 248, 47);
+           }
+           80%{
+               background-color: rgb(40, 76, 236);
+           }
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Hello</h1>
+
+
+
+</body>
+
+</html>

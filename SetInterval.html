@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>SetInterval: Kinda like For Loop</title>
+</head>
+<body>
+
+
+    <h1>SetInterval</h1>
+
+
+</body>
+
+<script>
+let body = document.querySelector("h1");
+
+setInterval(displayMe, 1000);
+
+function displayMe(){
+    body.innerHTML += "is awesome\n"
+} 
+// Remember + is important here as it keeps adding things instead of replacing :)
+
+
+//same with Arrow key functions :
+
+// setInterval(()=>{
+//     body.innerHTML += "This is Added Using Arrow functions !!!"
+// })
+
+
+
+</script>
+</html>
+
+

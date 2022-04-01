@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inset Lmao</title>
+
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'verdana';
+        margin: 0;
+    }
+
+    body {
+        background-image: linear-gradient(20deg, #252C2F 90%, rgb(63, 63, 185));
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 30%;
+        background: aliceblue;
+        border-radius: 10px;
+    }
+
+    .inner {
+        padding: 3rem 2rem;
+        border-radius: 10px;
+        width: 100%;
+        background-color: rgba(66, 91, 173, 0.925);
+        transition: all 0.5s ease;
+        clip-path: circle(10% at 0% 0%);
+    }
+
+    h1 {
+        color: white;
+        font-size: 50px;
+        margin-bottom: 1rem;
+    }
+
+    .inner p {
+        color: white;
+        /* font-size: 17px; */
+    }
+
+    .inner:hover {
+        clip-path: circle(100%);
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="inner">
+            <h1>Hey</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero id amet fuga nesciunt, nostrum architecto
+                ex quisquam nam, facilis ipsum non debitis dolorem cum impedit quas ea, recusandae porro consequuntur!
+            </p>
+            <br>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+</head>
+<style>
+    * {
+        margin: 0;
+        font-family: 'Readex Pro', sans-serif;
+        padding: 0;
+    }
+
+    body {
+        background-color: rgb(9, 36, 59);
+    }
+
+    .box {
+        position: relative;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+        width: 150px;
+        font-size: 100px;
+        background-color: rgba(0, 0, 0, 0.568);
+        overflow: hidden;
+        /* margin: 100px auto; */
+
+    }
+
+    .box h1 {
+        position: relative;
+        color: white;
+        font-size: 50px;
+        z-index: 10;
+    }
+
+
+
+    .box::before {
+        content: '';
+        position: absolute;
+        height: 167px;
+        width: 80px;
+        padding: 17px;
+        background-color: rgb(85 161 233);
+        animation: animate 1s linear infinite;
+    }
+
+    /* .box::before{
+    content: '';
+    position: absolute;
+    height: 148px;   /* Enable This. To Loading Circle like Animation !!!
+    width: 17px;
+    padding: 17px;
+    background-color: rgb(85 161 233);
+    animation: animate 1s cubic-bezier(0.1, 0.54, 1, 1) infinite;
+    left: 0;
+
+} */
+
+    @keyframes animate {
+        0% {
+            transform: rotate(0deg);
+            filter: hue-rotate(0deg);
+
+        }
+
+        100% {
+            transform: rotate(360deg);
+            filter: hue-rotate(350deg);
+        }
+    }
+
+    .box::after {
+        position: absolute;
+        content: '';
+        /* content: url('/pngkit_beyblade-png_2404439.png'); */
+        background-color: rgb(21, 41, 41);
+        inset: 4px;
+        border-radius: 50%;
+        /* z-index: 10; */
+
+
+    }
+</style>
+
+<body>
+
+    <div class="box">
+
+        <h1>2</h1>
+    </div>
+
+</body>
+
+</html>

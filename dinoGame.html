@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIno Game</title>
+</head>
+<style>
+    body {
+        background: rgba(16, 15, 27, 0.925);
+    }
+
+    .spinner {
+        position: absolute;
+        top: 42%;
+        left: 48%;
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+        padding: 2px;
+        background: conic-gradient(#0000 10%, #474bff) content-box;
+        -webkit-mask: repeating-conic-gradient(#0000 0deg, #000 1deg 20deg, #0000 21deg 36deg),
+            radial-gradient(farthest-side, #0000 calc(100% - 14px), #000 calc(100% - 14px));
+        -webkit-mask-composite: destination-in;
+        mask-composite: intersect;
+        animation: spinner-d55elj 1s infinite steps(10);
+        transition: 0.5s ease-out;
+    }
+
+    @keyframes spinner-d55elj {
+        to {
+            transform: rotate(1turn);
+        }
+    }
+
+    .gamecontainer {
+        position: absolute;
+        height: 500px;
+        width: 800px;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -40%);
+        border: 2px solid #8a2be2;
+        transition: 0.5s ease-out;
+        clip-path: polygon(77.1% 11.8%, 77% 71.3%, 15% 68.5%, 15% 10%);
+    }
+
+    .btn {
+        padding: 10px;
+        background: blueviolet;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+        font-size: 17px;
+        color: white;
+        border: none;
+    }
+</style>
+
+<body>
+    <div class="spinner"></div>
+
+    <div class="gamecontainer">
+        <iframe src="https://chromedino.com/" frameborder="0" scrolling="no" width="100%" height="100%"
+            loading="lazy"></iframe>
+    </div>
+
+    <button class="btn">Click Me</button>
+
+</body>
+
+<script src="https://chromedino.com/"></script>
+<script>
+    let spinner = document.querySelector(".spinner");
+    let butn = document.querySelector('.btn');
+    let body = document.querySelector('body');
+
+    function autoGame() {
+        function keyDown(e) {
+            Podium = {};
+            var n = document.createEvent("KeyboardEvent");
+            Object.defineProperty(n, "keyCode", {
+                get: function () {
+                    return this.keyCodeVal;
+                },
+            }),
+                n.initKeyboardEvent ? n.initKeyboardEvent("keydown", !0, !0, document.defaultView, e, e, "", "", !1, "") : n.initKeyEvent("keydown", !0, !0, document.defaultView, !1, !1, !1, !1, e, 0),
+                (n.keyCodeVal = e),
+                document.body.dispatchEvent(n);
+        }
+        function keyUp(e) {
+            Podium = {};
+            var n = document.createEvent("KeyboardEvent");
+            Object.defineProperty(n, "keyCode", {
+                get: function () {
+                    return this.keyCodeVal;
+                },
+            }),
+                n.initKeyboardEvent ? n.initKeyboardEvent("keyup", !0, !0, document.defaultView, e, e, "", "", !1, "") : n.initKeyEvent("keyup", !0, !0, document.defaultView, !1, !1, !1, !1, e, 0),
+                (n.keyCodeVal = e),
+                document.body.dispatchEvent(n);
+        }
+        setInterval(function () {
+            Runner.instance_.horizon.obstacles.length > 0 &&
+                (Runner.instance_.horizon.obstacles[0].xPos < 25 * Runner.instance_.currentSpeed - Runner.instance_.horizon.obstacles[0].width / 2 && Runner.instance_.horizon.obstacles[0].yPos > 75 && (keyUp(40), keyDown(38)),
+                    Runner.instance_.horizon.obstacles[0].xPos < 30 * Runner.instance_.currentSpeed - Runner.instance_.horizon.obstacles[0].width / 2 && Runner.instance_.horizon.obstacles[0].yPos <= 75 && keyDown(40));
+        }, 5);
+        alert('Okay !')
+    }
+
+    butn.addEventListener('click', autoGame)
+
+    function DisplayNn() {
+        spinner.style.transition = "0.5s ease"
+        spinner.style.display = "none"
+    }
+    window.addEventListener('load', DisplayNn)
+
+
+</script>
+
+</html>

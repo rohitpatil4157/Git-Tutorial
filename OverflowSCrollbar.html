@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow with Scroller</title>
+</head>
+
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #4e4efca8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        min-height: 80vh;
+        animation: FullVh 1s cubic-bezier(0.165, 0.84, 0.44, 1), bgchnage 1s ease;
+        transition: all 1s ease;
+    }
+
+
+    @keyframes bgchnage {
+        to {
+            transition: .5s linear;
+            /* background-color: chartreuse; */
+        }
+
+    }
+
+    @keyframes FullVh {
+        from {
+            opacity: 0;
+            clip-path: circle(0%);
+            transform: translateY(-100%);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0%);
+            clip-path: circle(100%);
+        }
+    }
+
+    .box {
+        height: 100px;
+        width: 400px;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        overflow-x: hidden;
+        border-radius: 5px;
+        margin: 50px 0;
+        padding: 10px;
+        mix-blend-mode: screen;
+        text-align: center;
+
+    }
+
+    .box::-webkit-scrollbar {
+        /* IMPP  */
+        width: 8px;
+    }
+
+    /* .box::-webkit-scrollbar-track {
+        background: rgba(0, 68, 255, 0.1);
+
+    } */
+
+
+    .box::-webkit-scrollbar-thumb {
+        /* IMPP  */
+        display: none;
+        background: rgb(85, 85, 85);
+        border-radius: 2px;
+        transition: 1s ease;
+
+
+    }
+
+    .box::-webkit-scrollbar-thumb:hover {
+        /* IMPP  */
+        background: rgb(255, 100, 61);
+
+    }
+
+    ::selection {
+        /* () For text Selection*/
+        background-color: #4efcab;
+        text-rendering: optimizeSpeed;
+    }
+
+    P {
+        outline: none;
+    }
+
+    div:hover::-webkit-scrollbar-thumb {
+        /*Idk why this works but Now It'll show scrollbar only hovered over that .box div although it won't work when i used .box in place of div above */
+        display: block;
+    }
+
+
+
+
+    .progress {
+        /* IMPP  */
+        position: relative;
+        width: 400px;
+        height: 5px;
+        background-color: rgba(0, 0, 0, 0.37);
+        overflow: hidden;
+        transition: all 0.4s ease;
+    }
+
+    .progress::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        background-color: rgb(238, 255, 0);
+        animation: go 2s ease infinite;
+
+    }
+
+    .progress::after {
+        /* IMPP  */
+        content: '';
+        position: absolute;
+        width: 150px;
+        height: 100%;
+        background-color: rgb(238, 255, 0);
+        animation: go2 2s ease 0.7s infinite;
+        visibility: hidden;
+    }
+
+    @keyframes go {
+
+        0% {
+            width: 0;
+            transform: translateX(-98%);
+
+        }
+
+        20% {
+            width: 100px;
+            /* transform: translateX(-98%); */
+
+        }
+
+        100% {
+            width: 100px;
+            transform: translateX(500%);
+
+        }
+
+    }
+
+    @keyframes go2 {
+
+        0% {
+            visibility: visible;
+            transform: translateX(-98%);
+
+        }
+
+        100% {
+            transform: translateX(450%);
+
+        }
+
+    }
+
+    .hidebg {
+        background: none;
+        filter: invert();
+        border: 1px solid rgb(255, 9, 50);
+        transform: scale(2, 0.5);
+        text-align: justify;
+
+        /*This Class added to override the settings of .progress & Customize or Reuse the progress-bar*/
+    }
+</style>
+
+
+
+<body>
+    <div class="box">
+        <p contenteditable>
+            Chrome, Edge, Safari and Opera support the non-standard ::-webkit-scrollbar pseudo
+            element, which allows us
+            to modify the look of the browser's scrollbar.
+
+            The following example creates a thin (10px wide) scrollbar, which has a grey track/bar color and a dark-grey
+            (#888) handle. <br> <br>
+            The -webkit-scrollbar family of properties consists of seven different pseudo-elements that, together,
+            comprise a full scrollbar UI element
+        </p>
+        <div class="progress hidebg"> </div>
+
+    </div>
+
+    <div class="progress">
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Loader</title>
+    <link rel="stylesheet" href="Thisloader.css">
+</head>
+<style>
+    body {
+        background: aliceblue;
+        padding: 0;
+        margin: 0;
+    }
+
+
+    #id {
+        position: absolute;
+        top: 40%;
+        width: 500px;
+        height: 8px;
+        margin: auto 500px;
+        background-color: rgba(60, 141, 235, 0.548);
+        transition: 1s;
+        overflow: hidden;
+    }
+
+    #id:hover {
+        background-color: rgb(3, 22, 39);
+        /* width: 600px */
+
+    }
+
+    #id::before {
+        position: absolute;
+        content: '';
+        top: -192px;
+        left: 172px;
+        bottom: 0;
+        background-color: brown;
+        height: 609px;
+        width: 20%;
+        animation: loading 2s cubic-bezier(0, -0.06, 0.65, 0.96) infinite;
+
+    }
+
+
+    @keyframes loading {
+        0% {
+            transform: rotate(0deg);
+            /* filter: hue-rotate(0deg); */
+
+        }
+
+        100% {
+            transform: rotate(360deg);
+            filter: hue-rotate(360deg);
+        }
+
+    }
+
+    #id::after {
+
+        position: absoulte;
+        content: '';
+        background-color: rgb(21, 19, 22);
+        inset: 4px;
+        z-index: 10;
+        border-radius: 10px;
+    }
+</style>
+
+<body>
+
+    <div id="id">
+    </div>
+
+</body>
+
+</html>

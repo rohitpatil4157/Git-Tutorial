@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event listeners
+    </title>
+
+    <style>
+        * {
+            margin: 0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 40px;
+
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+
+        }
+
+        h1 {
+
+            position: relative;
+            /* left: 40% */
+            top: 50%;
+            /* margin: 20px 20px; */
+            padding: 10px 200px;
+            background-color: "#2b3570";
+            /* border: 1.2px solid #2b3570; */
+            border-radius: 10px;
+            color: rgb(182, 182, 255);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <h1>
+            I'm Mutable :D
+        </h1>
+    </div>
+
+
+
+
+    <script>
+        // Initialization Time :D
+
+        let a = document.querySelector('h1');
+        let backg = document.querySelector('body')
+        a.addEventListener('click', Changedisplay);
+
+        //Function Define Time :)
+        function Changedisplay() {
+            if (backg.style.background == "") {
+                backg.style.background = "#2b3570";
+                a.style.background = "white";
+                a.style.transition = "0.5s linear";
+
+            }
+            else {
+                backg.style.background = "";
+                a.style.background = "#2b3570";
+            }
+        }
+    // You can also use "arrow function" instead of this function!
+
+    </script>
+
+</body>
+
+</html>

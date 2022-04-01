@@ -1,0 +1,11 @@
+In the above example, we have created an input field of type file, which lets us give a file as an input. Then specified a <pre> tag. In HTML, the <pre> element is used to specify a block of preformatted text that includes text spaces, line breaks, tabs, and other formatting characters that web browsers ignore. The JavaScript code is within the <script> tags.
+
+In the above example, we have created an input field of type file, which lets us give a file as an input. Then specified a <pre> tag. In HTML, the <pre> element is used to specify a block of preformatted text that includes text spaces, line breaks, tabs, and other formatting characters that web browsers ignore. The JavaScript code is within the <script> tags.
+
+In the above example, we have created an input field of type file, which lets us give a file as an input. Then specified a <pre> tag. In HTML, the <pre> element is used to specify a block of preformatted text that includes text spaces, line breaks, tabs, and other formatting characters that web browsers ignore. The JavaScript code is within the <script> tags.
+
+In the above example, we have created an input field of type file, which lets us give a file as an input. Then specified a <pre> tag. In HTML, the <pre> element is used to specify a block of preformatted text that includes text spaces, line breaks, tabs, and other formatting characters that web browsers ignore. The JavaScript code is within the <script> tags.
+
+In the above example, we have created an input field of type file, which lets us give a file as an input. Then specified a <pre> tag. In HTML, the <pre> element is used to specify a block of preformatted text that includes text spaces, line breaks, tabs, and other formatting characters that web browsers ignore. The JavaScript code is within the <script> tags.
+
+
