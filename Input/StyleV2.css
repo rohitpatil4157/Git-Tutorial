@@ -1,0 +1,78 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+
+}
+
+.wrapper{
+    width: 450px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px black;
+    padding: 30px;
+}
+
+.wrapper .input-data{
+    position: relative;
+    height: 40px;
+    width: 100%;
+}
+
+.wrapper .input-data input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid silver;
+    font-size: 18px;
+    outline: none;
+}
+
+.wrapper .input-data label{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: grey;
+    font-size: 15px;
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+
+.wrapper .input-data input:focus + label,
+.wrapper .input-data input:valid + label{
+    transform: translateY(-20px);
+    color: #4158d0;
+    font-size: calc(1rem  - 5px);
+}
+.wrapper .input-data .line{
+    position: relative;
+    height: 2px;
+    width: 100%;
+    bottom: 0px;
+}
+.input-data .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #4158d0;
+    transform: scaleX(0);
+    transition: 0.2s ease;
+    bottom: 1px;
+    
+}
+.wrapper .input-data input:focus ~ .line:before,
+.wrapper .input-data input:valid ~ .line:before{
+
+    transform: scaleX(1);
+
+}
+

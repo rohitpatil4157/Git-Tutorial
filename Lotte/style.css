@@ -1,0 +1,39 @@
+body{
+    background: rgb(39, 50, 87, 0.5);
+
+}
+
+
+.container {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    background: #232323;
+    padding: 2em;
+}
+
+button {
+    background: #343434;
+    margin-top: 2em;
+    border: none;
+    padding: 1em;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    outline: 0;
+    cursor: pointer;
+
+}
+
+.svg {
+    width: 400px;
+    position: absolute;
+    top: -80px;
+    left: -400px;
+    pointer-events: none;
+}
+
+hide{
+    display: none;
+}

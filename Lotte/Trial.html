@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trial</title>
+    <link rel="stylesheet" href="./TrialCss.css">
+</head>
+<body>
+
+
+    
+    <div class="container">
+        <!-- <h1>Hello Friends, Tea Drinking!</h1> -->
+        <div class='svg hide' id="svg">
+
+        </div>
+        <button>click to Show</button>
+
+
+    </div>
+
+
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.8.1/lottie.min.js"></script>
+<script>
+    
+    const button = document.querySelector('button');
+    const svgContainer = document.getElementById('svg');
+
+    
+    //
+    let anime = bodymovin.loadAnimation({
+        wrapper: svg,
+        Type: 'svg',
+        loop: false,
+        Autoplay: false,
+        path: "https://assets7.lottiefiles.com/packages/lf20_a12q2zhp.json"
+    });
+
+    button.addEventListener('click', ()=>{
+        svgContainer.classList.remove('hide');
+        anime.goToAndPlay(0, 96);
+    })
+    button.addEventListener('Complete', ()=>{
+        svgContainer.classList.add('hide');
+        
+    })
+
+
+
+
+</script>
+</html>

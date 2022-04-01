@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style2.css">
+</head>
+<body>
+    
+
+
+    <div class="container">
+        <div class="svg hide" id="svg"></div>
+
+        <h1>My card title</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus dolores ullam, adipisci sint aut magni!</p>
+    
+        <button>Get Started</button>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.8.1/lottie.min.js"></script>
+<script>
+
+const play = document.querySelector("button");
+
+const svgContainer = document.getElementById("svg");
+const animItem = bodymovin.loadAnimation({
+  wrapper: svgContainer,
+  animType: "svg",
+  loop: false,
+  autoplay: false,
+  path: "https://assets2.lottiefiles.com/packages/lf20_u4yrau.json"
+});
+
+play.addEventListener("click", () => {
+  svgContainer.classList.remove("hide");
+  animItem.goToAndPlay(0, true);
+});
+
+animItem.addEventListener("complete", () => {
+  svgContainer.classList.add("hide");
+});
+
+
+
+</script>
+</html>
